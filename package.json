@@ -1,0 +1,28 @@
+{
+  "name": "rengar-xlsx",
+  "version": "0.1.0",
+  "description": "xlsx-plugins",
+  "main": "index.js",
+  "scripts": {
+    "build:rollup": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rengar",
+  "license": "ISC",
+  "dependencies": {
+    "throttle-debounce": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup": "1.14.4",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "10.0.0",
+    "rollup-plugin-node-builtins": "2.1.2",
+    "rollup-plugin-node-globals": "1.4.0",
+    "rollup-plugin-node-resolve": "5.0.1"
+  }
+}
