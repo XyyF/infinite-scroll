@@ -1,7 +1,7 @@
 {
-  "name": "rengar-xlsx",
+  "name": "rengar-infiniteScroll",
   "version": "0.1.0",
-  "description": "xlsx-plugins",
+  "description": "infinite-scroll",
   "main": "index.js",
   "scripts": {
     "build:rollup": "rollup -c",
@@ -10,7 +10,7 @@
   "author": "rengar",
   "license": "ISC",
   "dependencies": {
-    "throttle-debounce": "^2.1.0"
+    "throttle-debounce": "1.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",

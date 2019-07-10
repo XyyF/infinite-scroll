@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>infinite-scroll</title>
+    <meta name="description" content="无限滚动infinite-scroll">
+    <style type="text/css">
+        ul {
+            height: 300px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: auto;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background: #e8f3fe;
+            margin: 10px;
+            color: #7dbcfc;
+        }
+
+        .container2 li {
+            background: #fff6f6;
+            color: #ff8484;
+        }
+    </style>
+</head>
+<body>
+<ul class="container">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<p>禁止滚动</p>
+<ul class="container2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<script type="text/javascript" src="../lib/infinite-scroll.umd.js"></script>
+<script type="text/javascript">
+    const container = document.querySelector('.container')
+    function addChildLi() {
+        const childrenLeg = container.children.length
+        const li = document.createElement('li')
+        li.innerHTML = `${childrenLeg + 1}`
+        container.appendChild(li)
+    }
+
+    window.InfiniteScroll.init(container, addChildLi)
+</script>
+<script type="text/javascript">
+    const container2 = document.querySelector('.container2')
+    function addChildLi() {
+        const childrenLeg = container2.children.length
+        const li = document.createElement('li')
+        li.innerHTML = `${childrenLeg + 1}`
+        container2.appendChild(li)
+    }
+
+    window.InfiniteScroll.init(container2, addChildLi, {disabled: true})
+</script>
+</body>
+</html>
